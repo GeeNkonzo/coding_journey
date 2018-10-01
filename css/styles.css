@@ -1,3 +1,12 @@
+/* div container */
+
+.container{
+   width:90%;
+   margin: 0 auto;
+ }
+
+/* navigation bar */
+
  ul {
     list-style-type: none;
     margin: 0;
@@ -6,10 +15,11 @@
     overflow: hidden;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
-    width:70%;
+    width:100%;
 }
 nav{
     background-color: #f3f3f3;
+    width:100%;
 }
 
 li {
@@ -20,7 +30,7 @@ li a {
     display: block;
     color: #666;
     align: center;
-    padding: 14px 80px;
+    padding: 14px 115px;
     text-decoration: none;
 }
 
@@ -33,6 +43,7 @@ li a.active {
     background-color: lightblue;
 }
 
+/* header and footer */
 
 header {
 	background-color:white;
@@ -41,33 +52,73 @@ footer {
 	background-color: #f3f3f3;
 }
 
+/* headings and paragraphs */
+
 h3 {
     color: #666;
 }
-
-
-
-
 
 h1, h2 {
   text-align: center;
   color:#666;
 }
 p {
-  text-align: center;
+  text-align: left;
   color:#666;
 }
+
+/* video sizing */
+
+.video{
+  width: 560px;
+  height: 315px;
+}
+
+/* form editing */
 
 form {
 	background-color: lightblue;
 	width: 50%;
-  align: center;
+  text-align: left;
+  padding: 5px;
 }
+
+input{
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+::placeholder {
+  color: #666;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #666;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #666;
+}
+
+/* page sizing */
 
 .page{
     padding-left: 15%;
     padding-right: 15%;
 }
+
+/* body  */
 
 body{
 	background-color: white;
@@ -75,159 +126,57 @@ body{
   padding-right: 15%;
 }
 
-/*************************
-Base Styles
-*************************/
 
-/* html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    font-family: Helvetica, Helvetica Neue, Arial;
-    font-size: 16px;
-    line-height: 26px;
-  }
-  
-  .wrapper {
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  .header-container {
-    border-bottom: 20px solid #0B132B;
-  }
-  
-  .footer-container,
-  .main aside {
-    border-top: 20px solid #0B132B;
-  }
-  
-  .header-container,
-  .footer-container,
-  .main aside {
-    background: #67AAF9;
-  }
-  
-  .title {
-    color: white;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-align: center;
-  }
-  
-  nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    background: #0b132b;
-  }
-  
-  nav a:hover,
-  nav a:visited {
-    color: white;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  .main {
-    padding: 30px 0;
-  }
-  
-  .main article h1 {
-    font-size: 2em;
-  }
-  
-  .main aside {
-    color: white;
-    padding: 0px 5% 10px;
-  }
-  
-  .footer-container footer {
-    color: white;
-    padding: 20px 0;
-  }
+/* responsive design */
 
-  /*************************
-Clearfix
-*************************/
-
-/* .clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-/* media queries */
-
-/* @media only screen and (min-width: 480px){
-    nav a{
-        float: left;
-        width 30%;
-        margin: 0 0 0 5%;
-        padding: 25px 1%;
-        margin-bottom:0;
-    }
-
-    nav li:first-child a{
-        margin-left 0;
-    }
-
-    nav li:last-child a{
-        margin-right:0;
-    }
-}
-
-@media only screen and (min-width:768px),
-    only screen and (min-width:700px) and (orientation:landscape){
-    .title{
-            float:left;
-            font-size: 1.4em;
+    @media only screen and (max-width: 1340px){
+          nav {
+            background-color: #f3f3f3;
+            margin: auto;
         }
-    
-    nav{
-        float:right'
-        width:60%;
+
+        .video{
+          width: 350px;
+          height: 200px;
+        }
+
+        body{
+          background-color: white;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        form {
+          background-color: lightblue;
+          width: 100%;
+          text-align: left;
+          padding: 5px;
+        }
+
     }
 
-    nav a{
-        padding: 15px 1%;
-    }
+    @media only screen and (max-width: 800px){
+          nav {
+              background-color: #f3f3f3;
+              width: 250px;
+              margin: auto;
+          }
 
-    .main article{
-        float: left;
-        width: 57%;
-    }
+          .video{
+            width: 250px;
+            height: 150px;
+          }
 
-    .main aside{
-        float:right;
-        width:38%;
-    }
+          body{
+            background-color: white;
+            padding-left: 5%;
+            padding-right: 5%;
+          }
 
-    } */
+          form {
+            background-color: lightblue;
+            width: 100%;
+            text-align: left;
+            padding: 5px;
+          }
+}
